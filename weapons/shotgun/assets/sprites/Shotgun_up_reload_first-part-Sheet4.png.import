@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uygtkse66m0a"
-path="res://.godot/imported/Shotgun_side-left_idle-and-run-Sheet6.png-f9a17d057e63069f799e88ed10e07cad.ctex"
+uid="uid://b1on7qj8ncbfi"
+path="res://.godot/imported/Shotgun_up_reload_first-part-Sheet4.png-120a7a9bb68d911372e9379d499e245d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://weapons/shotgun/assets/sprites/Shotgun_side-left_idle-and-run-Sheet6.png"
-dest_files=["res://.godot/imported/Shotgun_side-left_idle-and-run-Sheet6.png-f9a17d057e63069f799e88ed10e07cad.ctex"]
+source_file="res://weapons/shotgun/assets/sprites/Shotgun_up_reload_first-part-Sheet4.png"
+dest_files=["res://.godot/imported/Shotgun_up_reload_first-part-Sheet4.png-120a7a9bb68d911372e9379d499e245d.ctex"]
 
 [params]
 

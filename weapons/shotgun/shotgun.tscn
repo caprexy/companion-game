@@ -1,8 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://dfli2chvufqhr"]
+[gd_scene load_steps=23 format=3 uid="uid://dfli2chvufqhr"]
 
 [ext_resource type="Script" uid="uid://bdrsdp8p8ikt5" path="res://weapons/shotgun/shotgun.gd" id="1_kyb8j"]
-[ext_resource type="Texture2D" uid="uid://cpnkniqi6xymh" path="res://weapons/shotgun/assets/sprites/Shotgun_side-left_idle-and-run-Sheet6.png" id="1_mnyy7"]
+[ext_resource type="Texture2D" uid="uid://uygtkse66m0a" path="res://weapons/shotgun/assets/sprites/Shotgun_side-left_idle-and-run-Sheet6.png" id="1_mnyy7"]
 [ext_resource type="PackedScene" uid="uid://byb561t2c7uo0" path="res://weapons/bullet/bullet.tscn" id="2_4pnyj"]
+[ext_resource type="Texture2D" uid="uid://n3agsqhhq7ww" path="res://weapons/shotgun/assets/sprites/Shotgun_side-left_reload_third-part-Sheet2.png" id="4_ya88x"]
+[ext_resource type="Texture2D" uid="uid://bwulu7xpvkbql" path="res://weapons/shotgun/assets/sprites/Shotgun_side-left_reload_first-part-Sheet4.png" id="5_2taoa"]
+[ext_resource type="Texture2D" uid="uid://u6oqnq4etkws" path="res://weapons/shotgun/assets/sprites/Shotgun_side-left_reload_second-part-Sheet3.png" id="6_0eq7a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kyb8j"]
 atlas = ExtResource("1_mnyy7")
@@ -28,6 +31,42 @@ region = Rect2(60, 0, 15, 8)
 atlas = ExtResource("1_mnyy7")
 region = Rect2(75, 0, 15, 8)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6v52m"]
+atlas = ExtResource("4_ya88x")
+region = Rect2(0, 0, 15, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2jr7"]
+atlas = ExtResource("4_ya88x")
+region = Rect2(15, 0, 15, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrgwr"]
+atlas = ExtResource("5_2taoa")
+region = Rect2(0, 0, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3l2vk"]
+atlas = ExtResource("5_2taoa")
+region = Rect2(15, 0, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5iip3"]
+atlas = ExtResource("5_2taoa")
+region = Rect2(30, 0, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60h8j"]
+atlas = ExtResource("5_2taoa")
+region = Rect2(45, 0, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twig8"]
+atlas = ExtResource("6_0eq7a")
+region = Rect2(0, 0, 11, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idq1y"]
+atlas = ExtResource("6_0eq7a")
+region = Rect2(11, 0, 11, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_763t1"]
+atlas = ExtResource("6_0eq7a")
+region = Rect2(22, 0, 11, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_kpnin"]
 animations = [{
 "frames": [{
@@ -50,7 +89,52 @@ animations = [{
 "texture": SubResource("AtlasTexture_0fv4s")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6v52m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2jr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kyb8j")
+}],
+"loop": true,
+"name": &"reload_go_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrgwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3l2vk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5iip3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60h8j")
+}],
+"loop": true,
+"name": &"reload_go_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.4,
+"texture": SubResource("AtlasTexture_twig8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idq1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_763t1")
+}],
+"loop": true,
+"name": &"reload_idle_down",
 "speed": 5.0
 }]
 
@@ -58,8 +142,9 @@ animations = [{
 script = ExtResource("1_kyb8j")
 bullet_scene = ExtResource("2_4pnyj")
 
-[node name="WeaponSprite" type="AnimatedSprite2D" parent="."]
+[node name="ShotgunSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kpnin")
-autoplay = "default"
-frame = 1
-frame_progress = 0.09645182
+animation = &"reload_go_down"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.12146684
