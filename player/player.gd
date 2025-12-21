@@ -31,5 +31,3 @@ func _input(event):
 			# In your Player.gd
 	if Input.is_action_just_pressed("reload") and shotgun != null:
 		shotgun.reload()
-	elif event.is_action_pressed("left_click"):
-		shotgun.shoot()

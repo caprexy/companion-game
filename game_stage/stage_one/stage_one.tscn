@@ -1426,7 +1426,16 @@ tile_map_data = PackedByteArray("AAAEAAgAAAAEAAUAAAAFAAgAAAAFAAUAAAAGAAgAAAAIAAU
 tile_set = SubResource("TileSet_anjwv")
 
 [node name="Zombie" parent="." instance=ExtResource("3_jkvw3")]
-position = Vector2(-28, -10)
+position = Vector2(176, 2)
 
 [node name="Companion" parent="." instance=ExtResource("11_3exjt")]
 position = Vector2(54, -8)
+
+[node name="Zombie3" parent="." instance=ExtResource("3_jkvw3")]
+position = Vector2(-4, -108)
+
+[node name="Zombie4" parent="." instance=ExtResource("3_jkvw3")]
+position = Vector2(-84, -30)
+
+[node name="Zombie2" parent="." instance=ExtResource("3_jkvw3")]
+position = Vector2(-57, 94)
